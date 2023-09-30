@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Pacifico', cursive;
+}
+
+body{
+    background-color: rgb(255, 240, 220);
+    overflow-x: hidden;
+}
+
+h1, p, ul, a{
+
+    color: var(--main--color--text);
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 0% 0% 8%;
+}
+
+ul{
+    display: flex;
+    gap: 1pc;
+    font-size: 2pc;
+}
+
+li{
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2); 
+}
+
+a{
+    font-size: 2pc;
+}
+
+nav{
+    margin-right: 80px;
+}
+
+/* clases */
+.logo{
+    width: 120px;
+    margin-right: auto;
+    margin-left: 1pc;
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2);
+}
+
+.logo img{
+    width: 120px;
+}
+
+
+.shopping-car{
+    padding-right: 1pc;
+}
+
+.icon-three-lines{
+    display: none;
+}
+
+.climbing-plant{
+    width: 100%;
+    height: 5pc;
+    background: url(../imagenes/enredadera.png) ;
+    transform: rotate(-0.4deg);
+    position: absolute;
+    bottom: 75%;
+}
+
+.ornaments{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 15pc;
+    padding: 0% 0% 0% 10%;
+}
+
+.ornaments h1{
+    font-size: 5pc;
+    font-weight: 100;
+}
+
+.ornaments span{
+    color:  var(--color--background);
+    z-index: 2;
+    margin-left: 4pc;
+}
+
+.cup{
+    position: absolute;
+    left: 46.2%;
+    z-index: -1;
+}
+
+.cup img{
+    width: 28.125pc;
+}
+
+.mobile-element{
+    display: none;
+}
+
+.discover{
+    padding: 5% 0% 0% 2%;
+}
+
+.discover a{
+    font-size: 1.8pc;
+    width: 20%;
+}
+
+.text-discover{
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2);
+}
+
+.hr-discover{
+    display: none;
+}
+
+.arrow{
+    padding: 0.7% 0% 0% 2%;
+}
+
+/* pseudo clases */
+:root{
+    --main--color--text: rgb(71, 48, 26);
+    --color--background: rgb(255, 240, 220);
+}
+
+li:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+    border-bottom: 3px solid  rgb(71, 48, 26);;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.text-discover:hover{
+    transform: translateY(-10px);
+}
+
+/* selectores at */
+@media (max-width: 720px){
+    nav{
+        display: none;
+    }
+
+    .icon-three-lines{
+        display: contents;
+    }
+
+    .three-lines{
+        padding-right: 1pc;
+    }
+
+    .icon-shopping-car{
+        display: none;
+    }
+
+    .ornaments{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 60px 0 0 29px ;
+        width: 90%;
+    }
+
+    .ornaments span{
+        font-size: 3pc;
+    }
+    .Title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        height: 16pc;
+    }
+    .Title span, .Title h1{
+        height: 6pc;
+    }
+    
+    .pc-element{
+        display: none;
+    }
+    
+    .mobile-element{
+        display: block;
+        color: var(--color--background);
+    }
+
+    .cup{
+        left: 3%;
+        top: 1%;
+    }
+
+    .cup img{
+        width: 22pc;
+        transform: scaleX(-1);
+    }
+
+    
+}

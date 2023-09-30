@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Pacifico', cursive;
+    background-color: rgb(255, 240, 220);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+p,
+ul,
+a {
+
+    color: var(--main--color--text);
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 0% 0% 8%;
+}
+
+h1 {
+    font-size: 4pc;
+    font-weight: 100;
+    text-align: center;
+    margin: 2%;
+}
+
+h2{
+    font-size: 1.8pc;
+}
+
+p{
+    font-size: 1.5pc;
+}
+
+ul {
+    display: flex;
+    gap: 1pc;
+    font-size: 2pc;
+}
+
+li{
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2); 
+}
+
+a {
+    font-size: 2pc;
+}
+
+nav {
+    margin-right: 80px;
+}
+
+/* clases */
+.logo{
+    margin-right: auto;
+    margin-left: 1pc;
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2);
+}
+
+.logo img{
+    width: 120px;
+}
+
+.shopping-car {
+    padding-right: 1pc;
+}
+
+.icon-three-lines{
+    display: none;
+}
+
+.climbing-plant {
+    width: 100%;
+    height: 5pc;
+    background: url(../imagenes/enredadera.png);
+    transform: rotate(-0.4deg);
+    position: absolute;
+    bottom: 75%;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products h1{
+    margin-bottom: 3%;
+}
+
+.product-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(3, 0fr);
+    grid-row-gap: 5%;
+    grid-column-gap: 3pc;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+.card {
+    width: 16pc;
+    height: 19pc;
+    background-color: white;
+    position: relative;
+    box-shadow: -9px 9px 2px rgba(71, 48, 26, 0.3);
+    transition: transform 0.2s cubic-bezier(0.2, 0.55, 0.10, 2);
+}
+
+.card-image{
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img{
+    padding: 1pc;
+    width: 90%;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 70%;
+}
+
+.card-info h2{
+   height: 40px;
+   text-align: center;
+}
+
+.card-info p{
+    margin-left: 3%;
+}
+
+/* pseudo clases */
+.card:hover{
+    transform: translateY(-18px);
+    cursor: pointer;
+    z-index: 100;
+} 
+
+li:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+    border-bottom: 3px solid  rgb(71, 48, 26);;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+:root{
+    --main--color--text: rgb(71, 48, 26);
+    --color--background: rgb(255, 240, 220);
+}
+
+/* selectores at */
+@media (max-width: 720px){
+       
+    nav{
+        display: none;
+    }
+
+    .icon-three-lines{
+        display: contents;
+    }
+
+    .three-lines{
+        padding-right: 1pc;
+    }
+
+    .icon-shopping-car{
+        display: none;
+    }
+
+    .product-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);    
+        grid-template-rows: repeat(1, 0fr);
+        margin: auto;
+        grid-row-gap: 2pc;
+    }
+    
+}    
